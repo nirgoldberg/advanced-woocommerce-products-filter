@@ -1,0 +1,16 @@
+{
+  "name": "advanced-woocommerce-products-filter",
+  "version": "1.0.0",
+  "license": "(ISC OR GPL-3.0)",
+  "author": {
+    "name": "Nir Goldberg",
+    "email": "nir@htmline.com",
+    "url": "http://www.htmline.com"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-uglify": "~0.11.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "~0.4.5"
+  }
+}

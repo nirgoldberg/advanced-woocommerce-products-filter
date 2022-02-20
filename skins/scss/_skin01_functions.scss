@@ -1,0 +1,53 @@
+/**
+ * _skin01_functions.scss
+ *
+ * Widget front styling - skin #01 - functions
+ */
+
+@mixin reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+@mixin transform($efx) {
+	-webkit-transform: $efx;
+	-moz-transform:    $efx;
+	-ms-transform:     $efx;
+	-o-transform:      $efx;
+	transform:         $efx;
+}
+
+@mixin transition($efx: opacity, $speed: .25s) {
+	-webkit-transition: #{$efx} $speed;
+	-moz-transition:    #{$efx} $speed;
+	-ms-transition:     #{$efx} $speed;
+	-o-transition:      #{$efx} $speed;
+	transition:         #{$efx} $speed;
+}
+
+@mixin border-radius($radius, $background-clip: true) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+	
+	@if $background-clip {
+		-webkit-background-clip: padding-box; 
+		-moz-background-clip:    padding; 
+		background-clip:         padding-box;
+	} 
+}
+
+@mixin opacity($opacity) {
+	-khtml-opacity: $opacity;
+	-moz-opacity:   $opacity;
+	opacity:        $opacity;
+}
+
+@mixin calc($property, $expression) {
+	#{$property}: -moz-calc(#{$expression}); 
+	#{$property}: -o-calc(#{$expression}); 
+	#{$property}: -webkit-calc(#{$expression}); 
+	#{$property}: calc(#{$expression}); 
+}

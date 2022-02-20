@@ -1,0 +1,402 @@
+/**
+ * skin01.scss
+ *
+ * Widget front styling - skin #01
+ */
+
+/***********/
+/* imports */
+/***********/
+
+@import "skin01_params";
+@import "skin01_functions";
+
+@charset "utf-8";
+
+/**************/
+/* skin style */
+/**************/
+
+.awpf-widget {
+
+	/***********/
+	/* general */
+	/***********/
+
+	&, & * {
+		@include reset;
+	}
+
+	.awpf-filter {
+		margin: 15px 0;
+
+		/****************/
+		/* filter title */
+		/****************/
+
+		.awpf-filter-title {
+			position: relative;
+			padding: 7px 0 7px 30px;
+			background-color: $gray-color5;
+			cursor: pointer;
+
+			h3 {
+				font-size: 20px;
+				font-weight: normal;
+				color: $font-color;
+			}
+
+			.awpf-loader {
+				position: absolute;
+				top: 5px;
+				right: 0;
+				margin-right: 10px;
+				display: none;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 14px;
+				left: 10px;
+				width: 10px;
+				height: 10px;
+				border-top: 2px solid $black;
+				border-right: 2px solid black;
+				@include transform(rotate(45deg));
+				@include transition(all, .2s);
+				cursor: pointer;
+			}
+
+			& + .awpf-filter-content {
+				display: none;
+			}
+
+			&:hover,
+			&.collapsed {
+				background-color: $gray-color5;
+			}
+
+			&.collapsed {
+				&:before {
+					top: 13px;
+					left: 12px;
+					@include transform(rotate(135deg));
+				}
+
+				& + .awpf-filter-content {
+					display: block;
+				}
+			}
+		}
+
+		/******************/
+		/* filter content */
+		/******************/
+
+		.awpf-filter-content {
+			padding: 5px 0;
+			border: 2px solid $gray-color5;
+			background-color: $white;
+		}
+
+		/*******************/
+		/* categories menu */
+		/*******************/
+
+		&.awpf-category-filter {
+			.awpf-category-filter-title {
+				background-color: $red-color2;
+
+				&:hover,
+				&.collapsed {
+					background-color: $red-color1;
+				}
+			}
+
+			ul.categories {
+				list-style: none;
+
+				li {
+					position: relative;
+
+					& > a {
+						padding: 5px 10px 5px 35px;
+						font-size: 16px;
+						color: $font-color;
+						text-decoration: none;
+						cursor: pointer;
+						display: block;
+
+						&:hover {
+							background-color: $gray-color4;
+						}
+
+						& > .item-before {
+							position: absolute;
+							top: 9.5px;
+							left: 10px;
+							width: 0;
+							height: 0;
+							border-top: 7.5px solid transparent;
+							border-bottom: 7.5px solid transparent;
+							border-left: 13px solid $gray-color1;
+							cursor: pointer;
+						}
+					}
+
+					& > ul.children {
+						padding: 5px 0;
+						background-color: $gray-color6;
+						list-style: none;
+						display: none;
+
+						li {
+							& > a {
+								padding-left: 55px;
+								font-size: 15px;
+
+								& > .item-before {
+									left: 28px;
+								}
+							}
+
+							label {
+								position: relative;
+								padding: 5px 10px 5px 55px;
+								cursor: pointer;
+								display: block;
+
+								&:before {
+									content: "";
+									position: absolute;
+									top: 7px;
+									left: 25px;
+									width: 20px;
+									height: 20px;;
+									background-color: $gray-color2;
+									@include border-radius(50%);
+								}
+
+								&:after {
+									content: "";
+									position: absolute;
+									top: 13px;
+									left: 29px;
+									width: 12px;
+									height: 6px;
+									border: 3px solid $white;
+									border-top: none;
+									border-right: none;
+									background: transparent;
+									@include opacity(0);
+									@include transform(rotate(-45deg));
+								}
+
+								&:hover {
+									background-color: $gray-color5;
+
+									&:before {
+										background-color: $orange-color2;
+									}
+								}
+
+								& > span {
+									font-size: 15px;
+									font-weight: normal;
+								}
+							}
+
+							input[type=checkbox] {
+								display: none;
+
+								&:checked + label:before {
+									background-color: $orange-color2;
+								}
+
+								&:checked + label:after {
+									@include opacity(1);
+								}
+							}
+
+							& > ul.children {
+								li {
+									label {
+										padding-left: 70px;
+
+										&:before {
+											left: 45px;
+										}
+
+										&:after {
+											left: 49px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					&.collapsed {
+						& > a {
+							& > .item-before {
+								top: 11.5px;
+								border-top: 13px solid $gray-color1;
+								border-right: 7.5px solid transparent;
+								border-bottom: 0;
+								border-left: 7.5px solid transparent;
+							}
+						}
+
+						& > ul.children {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		/****************/
+		/* price filter */
+		/****************/
+
+		&.awpf-price-filter {
+			#awpf-price-filter-amount {
+				padding: 10px 15px;
+				background: transparent;
+			}
+
+			.ui-slider {
+				margin: 0 auto 10px;
+				height: 23px;
+				background: $gray-color5;
+				border: 0;
+				border-radius: 23px;
+				@include calc(width, "100% - 45px");
+
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					width: 23px;
+					height: 23px;
+					background: $gray-color5;
+				}
+
+				&:before {
+					left: -11px;
+					-webkit-border-top-left-radius:    50%;
+					-webkit-border-bottom-left-radius: 50%;
+					-moz-border-radius-topleft:        50%;
+					-moz-border-radius-bottomleft:     50%;
+					border-top-left-radius:            50%;
+					border-bottom-left-radius:         50%;
+				}
+
+				&:after {
+					right: -11px;
+					-webkit-border-top-right-radius:    50%;
+					-webkit-border-bottom-right-radius: 50%;
+					-moz-border-radius-topright:        50%;
+					-moz-border-radius-bottomright:     50%;
+					border-top-right-radius:            50%;
+					border-bottom-right-radius:         50%;
+				}
+
+				.ui-slider-range {
+					height: 23px;
+					background: $black;
+				}
+
+				.ui-slider-handle {
+					top: 0;
+					width: 23px;
+					height: 23px;
+					@include border-radius(50%);
+					background: $black;
+					border: 0;
+
+					&.ui-state-active {
+						background: $black;
+					}
+
+					&.ui-state-hover {
+						background: $black;
+					}
+				}
+			}
+		}
+
+		/*******************/
+		/* taxonomy filter */
+		/*******************/
+
+		&.awpf-tax-filter {
+			ul.tax-terms {
+				list-style: none;
+
+				li {
+					position: relative;
+
+					label {
+						position: relative;
+						padding: 5px 10px 5px 55px;
+						font-weight: normal;
+						cursor: pointer;
+						display: block;
+
+						&:before {
+							content: "";
+							position: absolute;
+							top: 7px;
+							left: 25px;
+							width: 20px;
+							height: 20px;;
+							background-color: $gray-color2;
+							@include border-radius(50%);
+						}
+
+						&:after {
+							content: "";
+							position: absolute;
+							top: 13px;
+							left: 29px;
+							width: 12px;
+							height: 6px;
+							border: 3px solid $white;
+							border-top: none;
+							border-right: none;
+							background: transparent;
+							@include opacity(0);
+							@include transform(rotate(-45deg));
+						}
+
+						&:hover {
+							&:before {
+								background-color: $black;
+							}
+						}
+
+						& > span {
+							font-size: 15px;
+							font-weight: normal;
+						}
+					}
+
+					input[type=checkbox] {
+						display: none;
+
+						&:checked + label:before {
+							background-color: $black;
+						}
+
+						&:checked + label:after {
+							@include opacity(1);
+						}
+					}
+				}
+			}
+		}
+	}
+}

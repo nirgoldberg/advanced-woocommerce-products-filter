@@ -1,0 +1,37 @@
+/**
+ * awpf-admin-style.scss
+ *
+ * Widget form styling
+ */
+.widget-content {
+	.awpf-taxonomies {
+		margin-top: 10px;
+
+		.tax {
+			margin-bottom: 10px;
+			overflow: hidden;
+
+			.inline-tax {
+				float: left;
+				width: 42%;
+			}
+
+			.inline-left {
+				margin-right: 2%;
+			}
+
+			.remove-tax {
+				margin: 23px 0 0 5px;
+				color: #2191bf;
+				cursor: pointer;
+				display: inline-block;
+			}
+		}
+	}
+
+	.awpf-add-tax {
+		color: #2191bf;
+		cursor: pointer;
+		display: inline-block;
+	}
+}

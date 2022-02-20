@@ -1,0 +1,162 @@
+/**
+ * skin01-rtl.scss
+ *
+ * Widget front styling - skin #01 / RTL
+ */
+
+/***********/
+/* imports */
+/***********/
+
+@import "skin01_params";
+@import "skin01_functions";
+
+@charset "utf-8";
+
+/**************/
+/* skin style */
+/**************/
+
+.awpf-widget {
+
+	.awpf-filter {
+
+		/****************/
+		/* filter title */
+		/****************/
+
+		.awpf-filter-title {
+			padding: 7px 30px 7px 0;
+
+			.awpf-loader {
+				left: 0;
+				right: auto;
+				margin-left: 10px;
+				margin-right: 0;
+			}
+
+			&:before {
+				left: auto;
+				right: 10px;
+				border-left: 2px solid black;
+				border-right: 0;
+				@include transform(rotate(-45deg));
+			}
+
+			&.collapsed {
+				&:before {
+					left: auto;
+					right: 12px;
+					@include transform(rotate(-135deg));
+				}
+			}
+		}
+
+		/*******************/
+		/* categories menu */
+		/*******************/
+
+		&.awpf-category-filter {
+			ul.categories {
+				li {
+					& > a {
+						padding: 5px 35px 5px 10px;
+
+						& > .item-before {
+							left: auto;
+							right: 10px;
+							border-left: 0;
+							border-right: 13px solid $gray-color1;
+						}
+					}
+
+					& > ul.children {
+						li {
+							& > a {
+								padding-left: 0;
+								padding-right: 55px;
+
+								& > .item-before {
+									left: auto;
+									right: 28px;
+								}
+							}
+
+							label {
+								padding: 5px 55px 5px 10px;
+
+								&:before {
+									left: auto;
+									right: 25px;
+								}
+
+								&:after {
+									left: auto;
+									right: 29px;
+								}
+							}
+
+							& > ul.children {
+								li {
+									label {
+										padding-left: 10px;
+										padding-right: 70px;
+
+										&:before {
+											left: auto;
+											right: 45px;
+										}
+
+										&:after {
+											left: auto;
+											right: 49px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/****************/
+		/* price filter */
+		/****************/
+
+		&.awpf-price-filter {
+			#awpf-price-filter-amount {
+				direction: ltr;
+				text-align: right;
+			}
+
+			.ui-slider {
+				direction: ltr;
+			}
+		}
+
+		/*******************/
+		/* taxonomy filter */
+		/*******************/
+
+		&.awpf-tax-filter {
+			ul.tax-terms {
+				li {
+					label {
+						padding: 5px 55px 5px 10px;
+
+						&:before {
+							left: auto;
+							right: 25px;
+						}
+
+						&:after {
+							left: auto;
+							right: 29px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

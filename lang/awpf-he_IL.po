@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced WooCommerce Products Filter 1.0\n"
+"POT-Creation-Date: 2016-02-24 10:56+0200\n"
+"PO-Revision-Date: 2016-02-24 10:56+0200\n"
+"Last-Translator: Nir Goldberg <nirg@bh.org.il>\n"
+"Language-Team: HTMLine <nir@htmline.com>\n"
+"Language: Hebrew\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../advanced-woocommerce-products-filter.php:54
+#: ../widgets/awpf/awpf-widget.php:43
+msgid "Advanced WooCommerce Products Filter"
+msgstr "סינון מוצרים"
+
+#: ../admin/admin.php:50
+msgid "Products Filter"
+msgstr "סינון מוצרים"
+
+#: ../admin/dashboard.php:51
+msgid "Products Filter Dashboard"
+msgstr "לוח בקרה סינון מוצרים"
+
+#: ../admin/dashboard.php:51
+msgid "Dashboard"
+msgstr "לוח בקרה"
+
+#: ../admin/dashboard.php:70
+msgid "What's New"
+msgstr "מה חדש"
+
+#: ../admin/dashboard.php:71
+msgid "Changelog"
+msgstr "ריכוז שינויים"
+
+#: ../admin/settings.php:51
+msgid "Products Filter Settings"
+msgstr "הגדרות סינון מוצרים"
+
+#: ../admin/settings.php:51
+msgid "Settings"
+msgstr "הגדרות"
+
+#: ../admin/views/dashboard.php:19
+msgid "Welcome to Advanced WooCommerce Products Filter"
+msgstr "ברוכים הבאים לסינון מוצרים"
+
+#: ../admin/views/dashboard.php:20
+#, php-format
+msgid "Thank you for installing AWPF %s! We hope you like it."
+msgstr "תודה רבה שהתקנתם את התוסף AWPF %s! אנו מקווים שתאהבו אותו."
+
+#: ../admin/views/settings.php:19
+msgid "Advanced WooCommerce Products Filter Settings"
+msgstr "הגדרות סינון מוצרים"
+
+#: ../templates/awpf-widget/awpf-widget-categories-menu.php:23
+msgid "Product Categories"
+msgstr "קטגוריות מוצרים"
+
+#: ../widgets/awpf/awpf-widget.php:45
+msgid ""
+"Add WooCommerce products filter, based on price and product custom taxonomies"
+msgstr "הטמעת מסנני מוצרים, המבוססים על מחיר ומאפייני מוצרים"
+
+#: ../widgets/awpf/awpf-widget.php:228 ../widgets/awpf/awpf-widget.php:251
+#: ../widgets/awpf/awpf-widget.php:303
+msgid "Title"
+msgstr "כותרת"
+
+#: ../widgets/awpf/awpf-widget.php:229 ../widgets/awpf/awpf-widget.php:304
+msgid "Taxonomy"
+msgstr "מאפיין"
+
+#: ../widgets/awpf/awpf-widget.php:236 ../widgets/awpf/awpf-widget.php:311
+msgid "Remove"
+msgstr "הסר"
+
+#: ../widgets/awpf/awpf-widget.php:252
+msgid "Show Product Categories Menu"
+msgstr "הצג תפריט קטגוריות מוצרים"
+
+#: ../widgets/awpf/awpf-widget.php:253
+msgid "Show Price Filter"
+msgstr "הצג סינון על פי מחיר"
+
+#: ../widgets/awpf/awpf-widget.php:254
+msgid "Price Filter Title"
+msgstr "כותרת סינון על פי מחיר"
+
+#: ../widgets/awpf/awpf-widget.php:256
+msgid "Product Taxonomies"
+msgstr "מאפייני מוצר"
+
+#: ../widgets/awpf/awpf-widget.php:262
+msgid "Add Taxonomy"
+msgstr "הוסף מאפיין"
+
+#: ../widgets/awpf/awpf-widget-front.php:498
+msgid "No products were found matching your selection."
+msgstr "לא נמצאו מוצרים התואמים את בחירתכם."
+
+#: ../widgets/awpf/awpf-widget-front.php:627
+msgid "All"
+msgstr "הכל"
